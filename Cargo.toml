@@ -1,0 +1,15 @@
+[package]
+name = "nostd"
+version = "0.1.0"
+authors = ["Philip Craig <philipjcraig@gmail.com>"]
+
+[dependencies]
+libc = { version = "0.2", default-features = false }
+object = { path = "../object", default-features = false }
+#addr2line = { path = "../addr2line", default-features = false }
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
